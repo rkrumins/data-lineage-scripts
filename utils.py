@@ -7,6 +7,10 @@ def load_model_from_local_filesystem(model_path):
         return json.load(f)
 
 
+def output_dictionary_as_json(json_dict):
+    return json.dumps(json_dict)
+
+
 def get_existing_entities_identifier_to_uuid_dict(existing_model, unique_identifier_property=SolidatusConstants.DEFAULT_UNIQUE_IDENTIFIER_PROPERTY_NAME):
     model_entities = existing_model[SolidatusModelKeyConstants.ENTITIES_KEY_NAME]
     uuid_to_unique_property_dict = dict()
